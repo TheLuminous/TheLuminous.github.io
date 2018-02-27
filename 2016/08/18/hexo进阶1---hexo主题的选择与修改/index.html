@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo进阶1---hexo主题的选择与修改 | TheLuminous</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="hexo," />
+  
+
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;好不容易搭建了自己的博客，满心欢喜的打开网址一看，心瞬间凉了半截–这实在是丑的毫无天理啊，此时，更换一个漂亮的主题成了我们的刚需。 1选择主题&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;主题在这里https://github.com/hexojs/hexo/wiki/Th">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo进阶1---hexo主题的选择与修改">
+<meta property="og:url" content="http:/TheLuminous.github.io/2016/08/18/hexo进阶1---hexo主题的选择与修改/index.html">
+<meta property="og:site_name" content="TheLuminous">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;好不容易搭建了自己的博客，满心欢喜的打开网址一看，心瞬间凉了半截–这实在是丑的毫无天理啊，此时，更换一个漂亮的主题成了我们的刚需。 1选择主题&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;主题在这里https://github.com/hexojs/hexo/wiki/Th">
+<meta property="og:image" content="http://i.imgur.com/Z8zwgxV.png">
+<meta property="og:image" content="http://i.imgur.com/CDFuYw6.jpg">
+<meta property="og:image" content="http://i.imgur.com/foJenv0.png">
+<meta property="og:image" content="http://i.imgur.com/JmhzFFQ.png">
+<meta property="og:updated_time" content="2016-08-18T14:09:13.938Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo进阶1---hexo主题的选择与修改">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;好不容易搭建了自己的博客，满心欢喜的打开网址一看，心瞬间凉了半截–这实在是丑的毫无天理啊，此时，更换一个漂亮的主题成了我们的刚需。 1选择主题&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;主题在这里https://github.com/hexojs/hexo/wiki/Th">
+<meta name="twitter:image" content="http://i.imgur.com/Z8zwgxV.png">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts List</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1选择主题"><span class="toc-text">1选择主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2更换主题"><span class="toc-text">2更换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1克隆主题到本地"><span class="toc-text">2.1克隆主题到本地</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2修改配置文件"><span class="toc-text">2.2修改配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3进入bash"><span class="toc-text">2.3进入bash</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3修改主题"><span class="toc-text">3修改主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1找文档"><span class="toc-text">3.1找文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2进bash"><span class="toc-text">3.2进bash</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-hexo进阶1---hexo主题的选择与修改" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">hexo进阶1---hexo主题的选择与修改</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.08.18</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>TheLuminous</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/初级入坑指南/">初级入坑指南</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好不容易搭建了自己的博客，满心欢喜的打开网址一看，心瞬间凉了半截–这实在是丑的毫无天理啊，此时，更换一个漂亮的主题成了我们的刚需。</p>
+<h1 id="1选择主题"><a href="#1选择主题" class="headerlink" title="1选择主题"></a>1选择主题</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主题在这里<br><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a>，选择一个自己喜欢的就好了，DEMO为演示地址，主题名为源码地址。其中有的是不能用的，根据个人喜好选择一个喜欢的。</p>
+<h1 id="2更换主题"><a href="#2更换主题" class="headerlink" title="2更换主题"></a>2更换主题</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下面以ALEX为例讲解如图<img src="http://i.imgur.com/Z8zwgxV.png" alt=""></p>
+<h2 id="2-1克隆主题到本地"><a href="#2-1克隆主题到本地" class="headerlink" title="2.1克隆主题到本地"></a>2.1克隆主题到本地</h2><p>点击主题名称进入主题地址记下网址：<em><a href="https://github.com/ppoffice/hexo-theme-alex" target="_blank" rel="noopener">https://github.com/ppoffice/hexo-theme-alex</a></em>。 在本地你存放博客文件的根目录下进入git bash（我的是myblog）执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/ppoffice/hexo-theme-alex themes/alex</span><br></pre></td></tr></table></figure>
+<p>clone的地址即为项目源码地址，会被存放到themes文件夹下面的alex中其中themes/后面可以随意起名字<br>。</p>
+<h2 id="2-2修改配置文件"><a href="#2-2修改配置文件" class="headerlink" title="2.2修改配置文件"></a>2.2修改配置文件</h2><p>在myblog根目录下找到config.yml文件如图：<img src="http://i.imgur.com/CDFuYw6.jpg" alt=""></p>
+<p>用写字板打开（记事本第一次打开的话排版不是很好）将其中的theme修改如下：<img src="http://i.imgur.com/foJenv0.png" alt=""></p>
+<p>其中theme为你选择的主题，名称为你themes文件夹中的文件名</p>
+<h2 id="2-3进入bash"><a href="#2-3进入bash" class="headerlink" title="2.3进入bash"></a>2.3进入bash</h2><p>在mylog根目录进入bash执行两个命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>这两步是重新生成blog并部署到github然后访问你个人博客的地址发现主题已经更改了</p>
+<h1 id="3修改主题"><a href="#3修改主题" class="headerlink" title="3修改主题"></a>3修改主题</h1><h2 id="3-1找文档"><a href="#3-1找文档" class="headerlink" title="3.1找文档"></a>3.1找文档</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更换完主题后你会发现然并卵—这tm的还是一片空白啊，怎么人家的绚丽多彩，我这点什么什么没有呢—-别着急，下面大家一起来修改主题。</p>
+<p>在每个主题源码的下面你都会发现一个READEME.md，这个就是对这个主题的介绍啦，你可以按照这个来修改主题。如题<img src="http://i.imgur.com/JmhzFFQ.png" alt=""></p>
+<p>是的，你没有看错，它是—-英文的。如果你的英文不太好的话，也不要伤心，你可以看看其他主题有没有中文的然后按照中文修改修改（改改布局啦，加入一些特有的功能啦如多说，统计什么的）你会发现，原来主题的修改都是大同小异的，也可以依样画葫芦修改自己的主题啦。这时候去hexo官网查看hexo帮助文档也是一个不错的选择，没准以后你灵感突发创造一个自己的主题呢。</p>
+<h2 id="3-2进bash"><a href="#3-2进bash" class="headerlink" title="3.2进bash"></a>3.2进bash</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们在修改主题的时候需要随时调试，可以在先用hexo s部署到本地查看效果然后等调试好了再hexo d提交。然后如果调试次数多了以后可以hexo clean清楚一下然后hexo g重新部署再hexo s本地部署或者hexo d（部署到github）。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;修改主题是最耗费时间的事情，毕竟不是你下载的主题就完全符合你的喜好，而且还要自己摸索。不过呢，我相信，当你终于拥有一个属于你的主题时，你的心情也是不可比拟的<em>@</em>，加油。</p>
+
+    
+  </div>
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/08/18/hexo进阶2---使用markdown书写文章/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/08/18/github进阶---git远程操作github/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">Close</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+    
+	
+    
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <div id="comment" class="vcomment" ></div>
+    <script>
+        var notify = 'false' == true ? true : false;
+        var verify = 'false' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "ggKItDQI1tPiLTRgLyAfbzdz-gzGzoHsz",
+            appKey: "iPDfdhfJlBFqonkGsYQMvKBh",
+            avatar:'mm',
+            placeholder: "Just go go",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+    </script>
+  	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

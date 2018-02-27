@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>github进阶---git远程对github的操控 | TheLuminous</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="github,git," />
+  
+
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;github给了我们一个免费的个人空间–300M，虽然不多，但也够我们用了。我们可以用这个空间来做一些有趣的事情，比如上传自己的html代码，生成自己独特的网页（你可以用这个空间去表白我会乱说）。好啦，下面给大家讲解一下如何远程操作我们的github空间。 1将本地项目push至远程仓库&amp;nbsp;&amp;n">
+<meta name="keywords" content="github,git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github进阶---git远程对github的操控">
+<meta property="og:url" content="http:/TheLuminous.github.io/2016/08/18/github进阶---git远程操作github/index.html">
+<meta property="og:site_name" content="TheLuminous">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;github给了我们一个免费的个人空间–300M，虽然不多，但也够我们用了。我们可以用这个空间来做一些有趣的事情，比如上传自己的html代码，生成自己独特的网页（你可以用这个空间去表白我会乱说）。好啦，下面给大家讲解一下如何远程操作我们的github空间。 1将本地项目push至远程仓库&amp;nbsp;&amp;n">
+<meta property="og:image" content="http://i.imgur.com/2UG45vW.png">
+<meta property="og:updated_time" content="2016-08-18T09:27:28.120Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="github进阶---git远程对github的操控">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;github给了我们一个免费的个人空间–300M，虽然不多，但也够我们用了。我们可以用这个空间来做一些有趣的事情，比如上传自己的html代码，生成自己独特的网页（你可以用这个空间去表白我会乱说）。好啦，下面给大家讲解一下如何远程操作我们的github空间。 1将本地项目push至远程仓库&amp;nbsp;&amp;n">
+<meta name="twitter:image" content="http://i.imgur.com/2UG45vW.png">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts List</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1将本地项目push至远程仓库"><span class="toc-text">1将本地项目push至远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1建空间"><span class="toc-text">1.1建空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2进bash"><span class="toc-text">1.2进bash</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2将github项目clone到本地"><span class="toc-text">2将github项目clone到本地</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1建空间"><span class="toc-text">2.1建空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2进bash"><span class="toc-text">2.2进bash</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-github进阶---git远程操作github" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">github进阶---git远程对github的操控</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.08.18</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>TheLuminous</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/初级入坑指南/">初级入坑指南</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;github给了我们一个免费的个人空间–300M，虽然不多，但也够我们用了。我们可以用这个空间来做一些有趣的事情，比如上传自己的html代码，生成自己独特的网页（你可以用这个空间去表白我会乱说）。好啦，下面给大家讲解一下如何远程操作我们的github空间。</p>
+<h1 id="1将本地项目push至远程仓库"><a href="#1将本地项目push至远程仓库" class="headerlink" title="1将本地项目push至远程仓库"></a>1将本地项目push至远程仓库</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先在github新建一个空白仓库，名字可以起你喜欢的名字。然后创建成功的话它应该是这样的<br><img src="http://i.imgur.com/2UG45vW.png" alt=""></p>
+<p>可以看出，github还是很人性化的，他已经告诉我们如何把本地的代码push到github上。我们就按照这个步骤来。</p>
+<h2 id="1-1建空间"><a href="#1-1建空间" class="headerlink" title="1.1建空间"></a>1.1建空间</h2><p>首先在合适的地方（自己喜欢）新建空白文件夹给她起一个好听的名字(比如说f）然后进入这个文件夹，把自己写好的代码放进去（此处以html代码为例）</p>
+<h2 id="1-2进bash"><a href="#1-2进bash" class="headerlink" title="1.2进bash"></a>1.2进bash</h2><p>在f中进入git bash执行以下命令</p>
+<p>1&gt;初始化git环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>2&gt;加载文件夹中的文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<p>“ . ”表示把文件夹中的文件全部加载，如果以后修改代码比如说增加了1.md文件那么只需 git add 1.md就可以了</p>
+<p>3&gt;为此次修改创建时间点（方便以后回到这个时间点，如果代码错误的话）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m “first commit“</span><br></pre></td></tr></table></figure>
+<p>“ ”内的内容可自行修改<br>4&gt;设置要上传到的远程地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https：//github.com/TeLuminous/f.git</span><br></pre></td></tr></table></figure>
+<p>其中用户名和仓库名都要换成自己的</p>
+<p>5&gt;push项目到远程分之</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>此时会要求你输入用户名和密码（如果闲这样麻烦的话，可以使用ssh传输，具体就是在4&gt;中将地址换为<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:Theluminous/f.git,就不用输入用户名和密码了)将本地项目上传至仓库的master分支（如果没有的话他会新建一个）静待片刻—-no，是很久很久（上传速度几kb，我也是欲哭无泪）<br>如果你要新建分支并切换的话，只需要</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b gh-pages origin/gh-pages</span><br></pre></td></tr></table></figure>
+<p>分支名字随意起名，如果只需要切换分支的话只需要</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout origin/gh-pages</span><br></pre></td></tr></table></figure>
+<p>如果remote出现错误，需要执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<p>master为你工作的分支然后再push就可以了</p>
+<p>至此github已经有了你的html代码了（需要说明一下，你的起始界面必须为index.html，github服务器会自动寻找index.html文件并打开它）然后再为这个仓库生成web界面就可以了具体步骤可以参照<a href="[https://theluminous.github.io/2016/08/16/github+hexo搭建个人博客/">https://theluminous.github.io/2016/08/16/github+hexo搭建个人博客/</a></p>
+<p>然后访问<em><a href="https://theluminous.github.io/test" target="_blank" rel="noopener">https://theluminous.github.io/test</a></em>/其中的用户名和仓库替换成你自己的就可以访问到自己的网站了。</p>
+<p>此后如果还要修改并push只需要执行前面的2&gt;,3&gt;,5&gt;步就可以了</p>
+<h1 id="2将github项目clone到本地"><a href="#2将github项目clone到本地" class="headerlink" title="2将github项目clone到本地"></a>2将github项目clone到本地</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上面说了将本地项目push到github仓库，那我们如果想把github的项目clone到本地呢？怎么办，分为以下几步。</p>
+<h2 id="2-1建空间"><a href="#2-1建空间" class="headerlink" title="2.1建空间"></a>2.1建空间</h2><p>新建文件夹并进入。</p>
+<h2 id="2-2进bash"><a href="#2-2进bash" class="headerlink" title="2.2进bash"></a>2.2进bash</h2><p>执行以下代码：</p>
+<p>clonegithub远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/TheLuminous/test.git</span><br></pre></td></tr></table></figure>
+<p>然后你就会发现你的文件夹里会出现一个test文件夹，然后你要对它做些什么见不得人的事情，我就管不着了。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这就是git的基本操作如果想要更深入的了解的话，可以到官网上去下载它的官方文档。如果你觉得这样一直在终端操作太麻烦那么你也可以用git GUI或者git for windows这样的可视化界面来操作。具体使用自行百度。。关于大家关心的表白页面的问题呢，可以百度一下表白界面的源码（实在是一大堆）然后放到仓库就可以了。</p>
+
+    
+  </div>
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/08/18/hexo进阶1---hexo主题的选择与修改/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">Close</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+    
+	
+    
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <div id="comment" class="vcomment" ></div>
+    <script>
+        var notify = 'false' == true ? true : false;
+        var verify = 'false' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "ggKItDQI1tPiLTRgLyAfbzdz-gzGzoHsz",
+            appKey: "iPDfdhfJlBFqonkGsYQMvKBh",
+            avatar:'mm',
+            placeholder: "Just go go",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+    </script>
+  	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

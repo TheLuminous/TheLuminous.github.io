@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>github+hexo搭建个人博客 | TheLuminous</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="github,hexo," />
+  
+
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;相逢即是缘，既然大家这么有缘，这本入坑指南就收你5块钱一本好了。本指南基于windows，采用github+hexo搭建个人博客。 1背景知识1.1github   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; GitHub于2008年上线，目前，除了Git代码仓库托管及">
+<meta name="keywords" content="github,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github+hexo搭建个人博客">
+<meta property="og:url" content="http:/TheLuminous.github.io/2016/08/16/github+hexo搭建个人博客/index.html">
+<meta property="og:site_name" content="TheLuminous">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;相逢即是缘，既然大家这么有缘，这本入坑指南就收你5块钱一本好了。本指南基于windows，采用github+hexo搭建个人博客。 1背景知识1.1github   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; GitHub于2008年上线，目前，除了Git代码仓库托管及">
+<meta property="og:image" content="http://i.imgur.com/pyY2P33.png">
+<meta property="og:image" content="http://i.imgur.com/jTDyHQG.png">
+<meta property="og:image" content="http://i.imgur.com/qhEieBr.png">
+<meta property="og:image" content="http://i.imgur.com/zJcunUI.png">
+<meta property="og:image" content="http://i.imgur.com/fNxc28h.png">
+<meta property="og:image" content="http://i.imgur.com/fcipfbj.png">
+<meta property="og:image" content="http://i.imgur.com/Xg6WowM.png">
+<meta property="og:image" content="http://i.imgur.com/oeDk3e9.png">
+<meta property="og:image" content="http://i.imgur.com/SsAGB1B.png">
+<meta property="og:image" content="http://i.imgur.com/xouJGep.png">
+<meta property="og:image" content="http://i.imgur.com/4ceSeJW.png">
+<meta property="og:image" content="http://i.imgur.com/M9N4Q1k.png">
+<meta property="og:image" content="http://i.imgur.com/BcsOXUn.png">
+<meta property="og:updated_time" content="2016-08-18T09:40:46.725Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="github+hexo搭建个人博客">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;相逢即是缘，既然大家这么有缘，这本入坑指南就收你5块钱一本好了。本指南基于windows，采用github+hexo搭建个人博客。 1背景知识1.1github   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; GitHub于2008年上线，目前，除了Git代码仓库托管及">
+<meta name="twitter:image" content="http://i.imgur.com/pyY2P33.png">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts List</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1背景知识"><span class="toc-text">1背景知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1github"><span class="toc-text">1.1github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2hexo"><span class="toc-text">1.2hexo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2环境搭建"><span class="toc-text">2环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1github环境搭建"><span class="toc-text">2.1github环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1注册github账号"><span class="toc-text">2.1.1注册github账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2下载安装git客户端"><span class="toc-text">2.1.2下载安装git客户端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2hexo环境搭建"><span class="toc-text">2.2hexo环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1安装node-js"><span class="toc-text">2.2.1安装node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2安装hexo"><span class="toc-text">2.2.2安装hexo</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3将hexo博客部署至github"><span class="toc-text">3将hexo博客部署至github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1配置ssh"><span class="toc-text">3.1配置ssh</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2将hexo部署至github"><span class="toc-text">3.2将hexo部署至github</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-github+hexo搭建个人博客" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">github+hexo搭建个人博客</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.08.16</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>TheLuminous</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/初级入坑指南/">初级入坑指南</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相逢即是缘，既然大家这么有缘，这本入坑指南就收你5块钱一本好了。本指南基于windows，采用github+hexo搭建个人博客。</p>
+<h1 id="1背景知识"><a href="#1背景知识" class="headerlink" title="1背景知识"></a>1背景知识</h1><h2 id="1-1github"><a href="#1-1github" class="headerlink" title="1.1github"></a>1.1github</h2><p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub于2008年上线，目前，除了Git代码仓库托管及基本的Web管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。正因为这些功能所提供的便利，又经过长期的积累，GitHub的用户活跃度很高，在开源世界里享有深远的声望，形成了所谓的社交化编程文化（Social Coding）。”——-其实不用这么复杂，你只需要知道它是一个分享代码的地方，并且可以托管你的项目源码，并为你的项目生成一个免费域名（所以我们就可以放我们自己编写的html上去了<em>-</em>）。</p>
+<h2 id="1-2hexo"><a href="#1-2hexo" class="headerlink" title="1.2hexo"></a>1.2hexo</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hexo 是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页托管在github和Heroku上，引用Hexo作者 @tommy351 的话：<br>快速、简单且功能强大的 Node.js 博客框架。 </p>
+<p>A fast, simple &amp; powerful blog framework, powered by Node.js.</p>
+<p>就是说，我们采用hexo来搭建自己的博客可以给我们带来极大的便利，比如发表文章，架构等等。当然，你也可以用自己的html代码去实现博客但如果要更新的话，又是一件很困难的事（尤其对我这样的前端小白来说==）。</p>
+<h1 id="2环境搭建"><a href="#2环境搭建" class="headerlink" title="2环境搭建"></a>2环境搭建</h1><h2 id="2-1github环境搭建"><a href="#2-1github环境搭建" class="headerlink" title="2.1github环境搭建"></a>2.1github环境搭建</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先你要有个github账号对不对，然后如果你要把本地的代码上传到github中你的个人仓库里，又要下载git客户端。所以此过程分两步进行。</p>
+<h3 id="2-1-1注册github账号"><a href="#2-1-1注册github账号" class="headerlink" title="2.1.1注册github账号"></a>2.1.1注册github账号</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如图，进入github官网注册，填写邮箱，用户名，密码。<br><img src="http://i.imgur.com/pyY2P33.png" alt=""><br>登陆进去以后选择“starte a project”或者“new repository”此时github可能会给你注册的邮箱发邮件，让你完成验证，去邮箱接受验证就可以了，如果有提示说给你发邮件但你没有收到的话，就去垃圾箱看一看<br><img src="http://i.imgur.com/jTDyHQG.png" alt=""><br>然后填写你仓库的名称，注意，此时因为我们要用hexo主题所以仓库的名称必须严格按照规定：用户名.github.io 比如我的注册名是TheLuminous，所以我的个人博客仓库的名字就是TheLuminous.github.io  如图，填写名字然后“creat repositroy”<br><img src="http://i.imgur.com/qhEieBr.png" alt=""><br>然后进入仓库点击“setting” 如图<br><img src="http://i.imgur.com/zJcunUI.png" alt=""><br>在setting中的options选项找到这个界面 如图<br><img src="http://i.imgur.com/fNxc28h.png" alt=""><br>点击它，然后选择“continue to layout” 如图<br><img src="http://i.imgur.com/fcipfbj.png" alt=""><br>然后随便选择一个主题（因为我们会用自己的主题替换它），点“publish 。。” 如图<br><img src="http://i.imgur.com/Xg6WowM.png" alt=""><br>然后复制仓库名，粘贴在浏览器地址栏，打开，效果如何，这就是你自己的网站了&amp;-&amp;。如图<br><img src="http://i.imgur.com/oeDk3e9.png" alt=""></p>
+<h3 id="2-1-2下载安装git客户端"><a href="#2-1-2下载安装git客户端" class="headerlink" title="2.1.2下载安装git客户端"></a>2.1.2下载安装git客户端</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以进入git官网下载（需要翻墙）<a href="https://www.git-scm.com/download/" target="_blank" rel="noopener">https://www.git-scm.com/download/</a>；也可以用楼主的分享<a href="http://pan.baidu.com/s/1qYlH4fi" target="_blank" rel="noopener">http://pan.baidu.com/s/1qYlH4fi</a><br>提取码:nhrd。自定义安装路径然后一路确定就可以了。</p>
+<h2 id="2-2hexo环境搭建"><a href="#2-2hexo环境搭建" class="headerlink" title="2.2hexo环境搭建"></a>2.2hexo环境搭建</h2><h3 id="2-2-1安装node-js"><a href="#2-2-1安装node-js" class="headerlink" title="2.2.1安装node.js"></a>2.2.1安装node.js</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hexo基于node.js所以需要安装node.js，可以去官网下载<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a>；也可以用楼主的分享<a href="http://pan.baidu.com/s/1qYlH4fi" target="_blank" rel="noopener">http://pan.baidu.com/s/1qYlH4fi</a><br>提取码:nhrd。自定义安装路径然后一路确定就可以了。</p>
+<h3 id="2-2-2安装hexo"><a href="#2-2-2安装hexo" class="headerlink" title="2.2.2安装hexo"></a>2.2.2安装hexo</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在你安装node.js的根目录下空白处右击鼠标出现如图<br><img src="http://i.imgur.com/SsAGB1B.png" alt=""></p>
+<p>选择“git bash here”进入git命令端<br>输入以下命令安装hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>待命令执行完毕后，关闭bash窗口，在此目录下新建myblog文件夹（你博客文件的存放地址，可以随意起名，最好用英文）然后进入myblog文件夹，在此根目录下空白处右击鼠标（操作同上一步）进入git命令端。执行如下命令：</p>
+<p>1初始化hexo环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>2安装依赖包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>3更新博客内容到服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>4启动hexo本地服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>即可看到你的博客<br>至此，hexo环境搭建成功</p>
+<h1 id="3将hexo博客部署至github"><a href="#3将hexo博客部署至github" class="headerlink" title="3将hexo博客部署至github"></a>3将hexo博客部署至github</h1><h2 id="3-1配置ssh"><a href="#3-1配置ssh" class="headerlink" title="3.1配置ssh"></a>3.1配置ssh</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Git是分布式的代码管理工具，远程的代码管理是基于SSH的，所以要使用远程的Git则需要SSH的配置(如果你是第一次使用git的话）<br>github的SSH配置如下：</p>
+<p>1在桌面进入git bash，输入以下命令<br>设置Git的user name和email：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;TheLuminous&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;718934648@qq.com&quot;</span><br></pre></td></tr></table></figure>
+<p>其中双引号的内容替换为自己用户名和email（注意，命令是有双引号的）</p>
+<p>2生成SSH密钥过程：<br>1&gt;查看是否已经有了ssh密钥：cd ~/.ssh<br>如果没有密钥则不会有此文件夹，有则备份删除</p>
+<p>2&gt;产生密钥（同样在此git bash执行命令）：<br>ssh-keygen -t rsa -C “<a href="mailto:718934648@qq.com" target="_blank" rel="noopener">718934648@qq.com</a>”<br>按3个回车，密码为空。引号处替换为自己email（命令有双引号）</p>
+<p>最后得到了两个文件：id_rsa和id_rsa.pub</p>
+<p>3.在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。位置在C:\Users\Administrator.ssh。用记事本打开，复制。<br>打开<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> ，登陆到自己的账户，然后添加ssh。选择setting如图<br><img src="http://i.imgur.com/xouJGep.png" alt=""></p>
+<p>然后选择ssh andGPG keys再选择new ssh key把复制的内容粘贴，保存<br><img src="http://i.imgur.com/4ceSeJW.png" alt=""></p>
+<p>至此，ssh配置完成</p>
+<h2 id="3-2将hexo部署至github"><a href="#3-2将hexo部署至github" class="headerlink" title="3.2将hexo部署至github"></a>3.2将hexo部署至github</h2><p>在myblog目录（你自定义的博客文件存放目录）下找到config.yml文件打开它（如果记事本排版不好就用写字板打开）如图<br><img src="http://i.imgur.com/M9N4Q1k.png" alt=""></p>
+<p>deploy中的各属性讲解如下：</p>
+<p>type：hexo部署时解析域名的种类</p>
+<p>repository：对应的存放个人博客源码的仓库地址，把用户名换成自己的即可</p>
+<p>branch：要部署到的分支</p>
+<p><strong>注意：冒号后面有一个空格！！！</strong>为了大家方便把文件粘贴到这：</p>
+<p>type: git</p>
+<p>  repository: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:TheLuminousTheLuminous.github.io.git</p>
+<p> branch: master</p>
+<p>如图：<br><img src="http://i.imgur.com/BcsOXUn.png" alt=""><br>然后在myblog根目录下进入git bash执行如下命令</p>
+<p>1配置hexo部署环境</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p>2重新部署hexo博客</p>
+<pre><code>hexo g
+</code></pre><p>3将本地hexo博客部署至github</p>
+<pre><code>hexo d
+</code></pre><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好了！到现在为止，试着访问“你的用户名.github.io”，你可以惊喜的发现，hexo的博客被部署到github了。到现在为止，你已经基本入坑。接下来我会为大家带来hexo和github的进阶使用（包括大家很关心的github托管静态网站与基于hexo主题的选择与改进），并教会大家如何用markdown高效的写文章。有任何问题欢迎email骚扰（<a href="mailto:718934648@qq.com" target="_blank" rel="noopener">718934648@qq.com</a>）。持续更新</p>
+
+    
+  </div>
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="hide pull-left" href="/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/08/17/闲来几笔涂鸦/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">Close</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+    
+	
+    
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <div id="comment" class="vcomment" ></div>
+    <script>
+        var notify = 'false' == true ? true : false;
+        var verify = 'false' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "ggKItDQI1tPiLTRgLyAfbzdz-gzGzoHsz",
+            appKey: "iPDfdhfJlBFqonkGsYQMvKBh",
+            avatar:'mm',
+            placeholder: "Just go go",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+    </script>
+  	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
